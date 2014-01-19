@@ -25,11 +25,12 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # This is where we'd set a backup provider if we had one
 #$(call inherit-product, device/sample/products/backup_overlay.mk)
-$(call inherit-product, device/huawei/viva/viva.mk)
+$(call inherit-product, device/huawei/viva/device_viva.mk)
 
+include $(SRC_TARGET_DIR)/product/emulator.mk
 # Discard inherited values and use our own instead.
 PRODUCT_NAME := full_viva
 PRODUCT_DEVICE := viva
-PRODUCT_BRAND := Huawei
+PRODUCT_BRAND := huawei
 PRODUCT_MANUFACTURER := Huawei
 PRODUCT_MODEL := U9200
